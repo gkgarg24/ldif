@@ -249,12 +249,15 @@ func (l *LDIF) parseEntry(lines []string) (entry *Entry, err error) {
 				case "add":
 					mod.Add(attribute, values)
 					op = ""
+					values = nil
 				case "replace":
 					mod.Replace(attribute, values)
 					op = ""
+					values = nil
 				case "delete":
 					mod.Delete(attribute, values)
 					op = ""
+					values = nil
 				default:
 					return nil, fmt.Errorf("invalid operation %s in modify request", op)
 				}
@@ -268,6 +271,7 @@ func (l *LDIF) parseEntry(lines []string) (entry *Entry, err error) {
 				op = attr
 				attribute = val
 			} else {
+				values = append(values, val)
 				if attr != attribute {
 					return nil, fmt.Errorf("invalid attribute %s in %s request for %s", attr, op, attribute)
 				}
