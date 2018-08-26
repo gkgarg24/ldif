@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gkgarg24/ldif/v1.1"
+	"github.com/gkgarg24/ldif/v1.1.0"
 )
 
 var ldifRFC2849Example = `version: 1
