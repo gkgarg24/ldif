@@ -1,4 +1,4 @@
-module github.com/gkgarg24/ldif
+module github.com/gkgarg24/ldif/v1.1
 
 require (
 	gopkg.in/asn1-ber.v1 v1.0.0-20170511165959-379148ca0225 // indirect
