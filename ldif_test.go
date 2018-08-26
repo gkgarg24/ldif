@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/go-ldap/ldif"
+	"github.com/gkgarg24/ldif"
 )
 
 var ldifRFC2849Example = `version: 1
