@@ -3,7 +3,7 @@ package ldif_test
 import (
 	"testing"
 
-	"github.com/gkgarg24/ldif/v1.1.0"
+	"github.com/gkgarg24/ldif"
 )
 
 var ldifRFC2849Example6 = `version: 1
